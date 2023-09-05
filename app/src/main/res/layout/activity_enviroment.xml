@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.EnvironmentActivity">
+
+    <TextView
+        android:id="@+id/tvTitleLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/md_divider_light_theme"
+        android:padding="@dimen/spacing_normal"
+        android:text="Informacion del servicio"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_space_margin"
+        android:background="@color/md_divider_light_theme"
+        android:selectAllOnFocus="true"
+        android:hint="Etiqueta"
+        android:padding="@dimen/spacing_normal"
+        app:layout_constraintBottom_toTopOf="@+id/etAccessCode"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleLabel" />
+
+    <EditText
+        android:id="@+id/etAccessCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_space_margin"
+        android:background="@color/md_divider_light_theme"
+        android:hint="Codigo de acceso al servicio"
+        android:selectAllOnFocus="true"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:padding="@dimen/spacing_normal"
+        app:layout_constraintBottom_toTopOf="@+id/btConfirm"
+        app:layout_constraintTop_toBottomOf="@+id/etTag" />
+
+    <Button
+        android:id="@+id/btConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_space_margin"
+        android:text="GUARDAR"
+        app:layout_constraintTop_toBottomOf="@+id/etAccessCode" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
